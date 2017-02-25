@@ -1,0 +1,11 @@
+﻿<h1>Hi {{viewModel.user.firstName}}!</h1>
+<p>We are happy that u are here!</p>
+<h3>All registered users List:</h3>
+<ul>
+    <li ng-repeat="user in viewModel.allUsers">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a ng-click="viewModel.deleteUser(user.id)">Delete</a>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="#!/login" class="btn btn-primary">Logout</a></p>
